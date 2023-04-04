@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Header from "../components/Header/Header"
+import movieImg from '../assets/images/movie-1.png'
 
 const Movies = () => { 
     const [movies, setMovies] = useState<any>([]);
@@ -16,9 +17,9 @@ const Movies = () => {
             <Header subHeader={"Popular Movies"}/>
             <div className="movies-card-container">
                 {
-                    movies.map((movie: any) => (
-                        <div className="movies-card">
-                            <div className="popular-card">MOVIE</div>
+                    movies.map((movie: any, index: any) => (
+                        <div className="movies-card" key={index + movie.title}>
+                            <div className="popular-card" style={{backgroundImage: `url(${movieImg})`}}></div>
                             <div className="card-text">{movie.title}</div>
                         </div>
                     ))

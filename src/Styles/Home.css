@@ -12,13 +12,14 @@
 .popular-card {
     height: 230px;
     width: 150px;
-    background-color: black;    
     display: flex;
     justify-content: center;
+    background-color: black;
     align-items: center;
     color: white;
     font-size: 33px;
     font-weight: 600;
     margin-bottom: 10px;
     cursor: pointer;
+    background-size: cover;
 }

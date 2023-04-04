@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Header/Header"
+import seriesImg from '../assets/images/movie-2.png'
 
 const Series = () => {
     const [series, setSeries] = useState<any>([]);
@@ -18,7 +19,7 @@ const Series = () => {
                 {
                     series.map((movie: any) => (
                         <div className="movies-card">
-                            <div className="popular-card">SERIES</div>
+                            <div className="popular-card" style={{backgroundImage: `url(${seriesImg})`}}></div>
                             <div className="card-text">{movie.title}</div>
                         </div>
                     ))
